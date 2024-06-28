@@ -182,7 +182,7 @@ main .book-form .btn-cancel {
   color: #fff;
 }
 
-.main .book-form .header-edit {
+main .book-form .header-edit {
   /* Display and Layout */
   display: flex;
   justify-content: space-between;
