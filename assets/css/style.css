@@ -1,0 +1,569 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/**
+* Reset Style.
+*/
+*,
+::after,
+::before {
+  /* Reset */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+
+  /* Box Model */
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/**
+* Layout.
+*/
+.container {
+  /* Size */
+  width: 90%;
+
+  /* Spacing */
+  margin: 1.5rem auto;
+}
+
+.grid {
+  /* Layout */
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.col-span-full {
+  /* Layout */
+  grid-column: 1 / -1;
+}
+
+/**
+* Body Style.
+*/
+body {
+  /* Margin and padding */
+  margin: 0;
+  padding-top: 3rem;
+
+  /* Typography */
+  color: #000;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+/**
+* Header Style.
+*/
+header {
+  /* Layout */
+  display: flex;
+  justify-content: center;
+}
+
+header h1 {
+  /* Typography */
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+/**
+* Main Style.
+*/
+main section {
+  /* Margin */
+  margin-top: 5rem;
+}
+
+main section h2 {
+  /* Box Model */
+  border-bottom: 1px dotted rgb(107 114 128);
+  width: fit-content;
+
+  /* Typography */
+  font-weight: 400;
+}
+
+/**
+* Card Style.
+*/
+main .card {
+  /* Spacing */
+  margin-top: 1rem;
+  padding: 1rem;
+
+  /* Border */
+  border: 1px solid black;
+
+  /* Transition */
+  transition: all 0.3s;
+}
+
+main .card:hover {
+  /* Box Shadow */
+  box-shadow: 9px 9px 0px 0px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 9px 9px 0px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 9px 9px 0px 0px rgba(0, 0, 0, 1);
+}
+
+main .card.active {
+  /* Box Shadow */
+  box-shadow: 9px 9px 0px 0px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 9px 9px 0px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 9px 9px 0px 0px rgba(0, 0, 0, 1);
+}
+
+/**
+* Label and Input Style.
+*/
+main .label {
+  /* Layout */
+  display: block;
+
+  /* Spacing */
+  margin-bottom: 0.5rem;
+}
+
+main .input {
+  /* Layout */
+  width: 100%;
+
+  /* Spacing */
+  padding: 0.625rem;
+
+  /* Typography */
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  /* Visual */
+  background: transparent;
+  border: 1px solid black;
+}
+
+main .input:focus {
+  /* Visual */
+  outline: 0;
+}
+
+/**
+* BookForm Style.
+*/
+
+main .book-form {
+  /* Spacing */
+  margin-top: 1.5rem;
+}
+
+main .book-form .btn-cancel {
+  /* Spacing */
+  padding: 0.5rem;
+
+  /* Border */
+  border: 1px solid #000;
+
+  font-size: 0.7rem; /* 12px */
+
+  /* Background */
+  background: #000;
+
+  /* User Interaction */
+  cursor: pointer;
+
+  /* Typography */
+  color: #fff;
+}
+
+.main .book-form .header-edit {
+  /* Display and Layout */
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  /* Border */
+  border-bottom: none;
+
+  /* Width */
+  width: 100%;
+}
+
+main #bookForm .checkbox {
+  /* Layout */
+  display: flex;
+  align-items: center;
+
+  /* Spacing */
+  gap: 0.3rem;
+
+  /* User Interaction */
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+main #bookForm .checkbox label {
+  /* User Interaction */
+  cursor: pointer;
+}
+
+main #bookForm .checkbox input {
+  /* Size */
+  height: 0.7rem;
+  width: 0.7rem;
+
+  /* Spacing */
+  margin-bottom: -1px;
+
+  /* User Interaction */
+  cursor: pointer;
+}
+
+main #bookForm label {
+  /* Layout */
+  align-self: center;
+
+  /* Typography */
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+main #bookForm .btn-save-changes {
+  /* Typography */
+  font-weight: 800;
+}
+
+main #bookForm button {
+  /* Spacing */
+  padding: 0.8rem;
+
+  /* Typography */
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+
+  /* Border */
+  border: 1px solid black;
+
+  /* Background */
+  background-color: transparent;
+
+  /* User Interaction */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+main #bookForm button:hover {
+  /* Background */
+  background: #000;
+
+  /* Typography */
+  color: #fff;
+}
+
+main #bookForm button span {
+  /* Typography */
+  font-weight: 800;
+
+  /* Layout */
+  display: block;
+}
+
+/**
+* SearchBook Style.
+*/
+main #searchBook {
+  /* Spacing */
+  margin-top: 1rem;
+}
+
+main #searchBook .search {
+  /* Layout */
+  display: grid;
+  gap: 0.3rem;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+main #searchBook .search input {
+  /* Layout */
+  grid-column: span 1 / span 1;
+}
+
+main #searchBook button {
+  /* Spacing */
+  padding: 0.79rem;
+
+  /* Border */
+  border: 1px solid #000;
+
+  /* Background */
+  background: #000;
+
+  /* User Interaction */
+  cursor: pointer;
+
+  /* Typography */
+  color: #fff;
+  width: 100%;
+}
+
+/**
+* BookList Style.
+*/
+main #bookList {
+  /* Layout */
+  grid-column: 1 / -1;
+}
+
+main #bookList .card h3 {
+  /* Typography */
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.2rem;
+}
+
+main #bookList .card p {
+  /* Typography */
+  font-size: 0.75rem;
+  line-height: 1.3rem;
+}
+
+main #bookList .card .button-wrapper {
+  /* Layout */
+  gap: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
+  justify-content: space-between;
+}
+
+main #bookList .card .button-wrapper button {
+  /* Typography */
+  font-size: 0.7rem;
+  line-height: 1rem;
+  padding: 0.3rem 0.7rem;
+  transition: all 0.3s;
+
+  /* User Interaction */
+  cursor: pointer;
+}
+
+main #bookList .card .button-wrapper .btn-complete,
+main #bookList .card .button-wrapper .btn-incomplete {
+  /* Layout */
+  width: 6.4rem;
+
+  /* Border */
+  border: 1px solid black;
+
+  /* Typography */
+  font-weight: 600;
+
+  /* Background */
+  background: transparent;
+}
+
+main #bookList .card .button-wrapper .btn-complete:hover,
+main #bookList .card .button-wrapper .btn-incomplete:hover {
+  /* Typography */
+  color: #fff;
+
+  /* Background */
+  background: #000;
+}
+
+main #bookList .card .button-wrapper .btn-delete,
+main #bookList .card .button-wrapper .btn-edit {
+  /* Typography */
+  color: #fff;
+  font-weight: 600;
+}
+
+main #bookList .card .button-wrapper .btn-delete {
+  /* Layout */
+  margin-right: 2px;
+
+  /* Background */
+  background: rgb(185 28 28);
+
+  /* Border */
+  border: 1px solid rgb(185 28 28);
+}
+
+main #bookList .card .button-wrapper .btn-delete:hover {
+  /* Background */
+  background: rgb(153 27 27);
+}
+
+main #bookList .card .button-wrapper .btn-edit {
+  /* Background */
+  background: rgb(29 78 216);
+
+  /* Border */
+  border: 1px solid rgb(29 78 216);
+}
+
+main #bookList .card .button-wrapper .btn-edit:hover {
+  /* Background */
+  background: rgb(30 64 175);
+}
+
+/**
+* Footer Style.
+*/
+footer {
+  /* Padding */
+  padding: 3rem 1rem 1rem 1rem;
+
+  /* Typography */
+  font-size: 0.8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+footer a {
+  /* Typography */
+  color: #000;
+}
+
+footer a:hover {
+  /* Typography */
+  text-decoration: underline;
+}
+
+/**
+* Toast Style.
+*/
+.toast-container {
+  /* Positioning */
+  position: fixed;
+  top: 1rem;
+  bottom: auto;
+  right: 50%;
+  text-wrap: nowrap;
+  transform: translateX(50%);
+  z-index: 1000;
+
+  /* Transition */
+  transition: all 0.3s ease-in-out;
+}
+
+.toast {
+  /* Box Model */
+  border: 1px solid black;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+
+  /* Typography */
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  color: white;
+
+  /* Background and Visibility */
+  background: #000;
+  opacity: 0;
+  transform: translateY(-100%);
+  /* transform: translateY(100%); */
+
+  /* Transition */
+  transition: all 0.3s ease-in-out;
+}
+
+.toast.show {
+  /* Visibility */
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.toast.hide {
+  /* Visibility */
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+/**
+* Style (xs).
+*/
+@media (min-width: 558px) {
+  /**
+  * Layout Style.
+  */
+  .container {
+    /* Size */
+    max-width: 640px;
+  }
+
+  /**
+  * BookForm Style.
+  */
+  main #bookForm button span {
+    /* Display */
+    display: inline;
+  }
+
+  /**
+  * BookList Style.
+  */
+  main #bookList {
+    /* Layout */
+    grid-column: span 2 / span 2;
+  }
+}
+
+/**
+* Style (sm).
+*/
+@media (min-width: 640px) {
+  /**
+  * Layout Style.
+  */
+  .container {
+    /* Size */
+    max-width: 768px;
+  }
+
+  .grid {
+    /* Layout */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .col-span-2 {
+    /* Layout */
+    grid-column: span 2 / span 2;
+  }
+}
+
+/**
+* Style (lg).
+*/
+@media (min-width: 1024px) {
+  /**
+  * Toast Style.
+  */
+  .toast-container {
+    /* Positioning */
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+
+    /* Transition */
+    transform: translateX(0%);
+  }
+
+  .toast {
+    /* Typography */
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+
+    /* Transition */
+    transform: translateY(100%);
+  }
+}
